@@ -11,7 +11,7 @@ function Footer() {
             <img
               src="https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/logo.png?alt=media&token=0fe12fc6-a71f-48d6-961d-641c2b141e89"
               alt="Logo"
-              className="w-32 h-32 md:w-40 md:h-40" // Adjusted for responsive sizing
+              className="w-32 h-32 md:w-40 md:h-40"
             />
           </div>
           <h4 className="text-3xl font-bold text-gray-200">Stay Updated!</h4>
@@ -33,7 +33,7 @@ function Footer() {
         {/* Center Section: Find Us */}
         <div className="w-full md:w-1/3 text-center md:text-left space-y-8 mt-8 md:mt-0">
           <h4 className="text-3xl font-semibold text-gray-200">Find Us</h4>
-          <div className="flex justify-center md:justify-start mt-6"> {/* Added margin-top */}
+          <div className="flex justify-center md:justify-start mt-6">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.787517894853!2d73.10777259075809!3d33.53290967628697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed38cb5241a1%3A0x63fcffae759ad7a3!2sThe%20Curtain%20Shop!5e0!3m2!1sen!2sus!4v1731619824960!5m2!1sen!2sus"
               width="280"
@@ -47,16 +47,20 @@ function Footer() {
           <p className="text-gray-400 text-sm md:text-base mt-4">
             Our outlets are located in Bahawalpur, Rawalpindi, and Multan.
           </p>
-          {/* Added extra information */}
           <div className="mt-6">
             <p className="text-gray-400 text-sm md:text-base">
               Business Hours: <br />
               Mon - Thur: 11:00 AM - 9:00 PM <br />
-              Sat - Sun: 10:00 AM - 6:00 PM
+              Sat - Sun: 12:00 AM - 9:00 PM
             </p>
             <p className="text-gray-400 text-sm md:text-base mt-4">
               For inquiries, call us at: <br />
-              <span className="text-green-400 font-semibold">+92 3056667208</span>
+              <a
+                href="tel:+923056667208"
+                className="text-green-400 font-semibold hover:underline"
+              >
+                +92 3056667208
+              </a>
             </p>
           </div>
         </div>
@@ -64,7 +68,7 @@ function Footer() {
         {/* Right Section: Contact Us */}
         <div className="w-full md:w-1/3 text-center md:text-left space-y-8 mt-8 md:mt-0">
           <h4 className="text-3xl font-bold text-gray-200">Contact Us</h4>
-          <p className="text-gray-400 text-sm md:text-base">The Curtain Collections</p>
+          <p className="text-gray-400 text-sm md:text-base">The Curtain Collection</p>
           <p className="text-gray-400 text-sm md:text-base">
             Amir Furniture, Railway Road, Welcome Chowk, Bahawalpur
           </p>
