@@ -15,7 +15,7 @@ function Checkout() {
     phoneNumber: '',
     paymentMethod: 'cash', // Only one payment method: Cash on Delivery
   });
-  
+
   const [loading, setLoading] = useState(false); // For loading state
   const [error, setError] = useState(''); // For error handling
 
@@ -35,17 +35,30 @@ function Checkout() {
 
     setLoading(true);
 
-    // Construct the message
+    // Construct a cleaner, more readable message with better formatting
     const message = `
-      *Order Details*
-      Name: ${formData.firstName} ${formData.lastName}
-      Email: ${formData.email}
-      Address: ${formData.address}, ${formData.city}, ${formData.postalCode}
-      Phone: ${formData.phoneNumber}
-      Items: ${cartItems.map(item => `${item.name} (x${item.quantity}): Rs. ${parseFloat(item.price.replace(/[^0-9.-]+/g, '')).toFixed(2)}`).join(', ')}
-      Total Price: Rs. ${totalPrice}
-      Payment Method: Cash on Delivery
-    `;
+*️⃣ Order Summary *️⃣
+
+*Customer Info*:
+- *Name*: ${formData.firstName} ${formData.lastName}
+- *Email*: ${formData.email}
+- *Phone*: ${formData.phoneNumber}
+- *Address*: ${formData.address}, ${formData.city}, ${formData.postalCode}
+
+*🛒 Items*:
+${cartItems.map(item => {
+  return `
+  - *${item.name}* (x${item.quantity}): Rs. ${parseFloat(item.price.replace(/[^0-9.-]+/g, '')).toFixed(2)}
+    *Image*: ${item.image ? item.image : 'No image available'}
+  `;
+}).join('')}
+
+*💸 Total Price*: Rs. ${totalPrice}
+
+*💳 Payment Method*: Cash on Delivery
+
+Thank you for shopping with us! 😊
+`;
 
     // WhatsApp link
     const whatsappLink = `https://wa.me/923054122637?text=${encodeURIComponent(message)}`;
