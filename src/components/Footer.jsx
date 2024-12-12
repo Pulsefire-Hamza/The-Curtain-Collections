@@ -64,7 +64,7 @@ function Footer() {
         {/* Right Section: Contact Us */}
         <div className="w-full md:w-1/3 text-center md:text-left space-y-8 mt-8 md:mt-0">
           <h4 className="text-3xl font-bold text-gray-200">Contact Us</h4>
-          <p className="text-gray-400 text-sm md:text-base">The Curtain Collection</p>
+          <p className="text-gray-400 text-sm md:text-base">The Curtain Collections</p>
           <p className="text-gray-400 text-sm md:text-base">
             Amir Furniture, Railway Road, Welcome Chowk, Bahawalpur
           </p>
