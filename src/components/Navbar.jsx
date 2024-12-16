@@ -25,7 +25,7 @@ function Navbar() {
 <div className="absolute left-1/2 transform -translate-x-1/2">
   <Link to="/">
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/logo.png?alt=media&token=0fe12fc6-a71f-48d6-961d-641c2b141e89"
+      src="https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/mainlogo-removebg-preview.png?alt=media&token=2189409f-d805-4131-849c-9a9c49e2baf7"
       alt="Logo"
       className="h-38 md:h-56 lg:h-48 object-contain" // Increased height for larger appearance
     />
