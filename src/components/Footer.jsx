@@ -9,7 +9,7 @@ function Footer() {
         <div className="w-full md:w-1/3 flex flex-col items-center md:items-start space-y-8">
           <div className="bg-white p-4 rounded-full shadow-lg">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/mainlogo-removebg-preview.png?alt=media&token=2189409f-d805-4131-849c-9a9c49e2baf7"
+              src="https:https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/Curtain_Colletcions-removebg-preview.png?alt=media&token=027d40ba-6ef8-448d-8c53-54659858e5a1"
               alt="Logo"
               className="w-32 h-32 md:w-40 md:h-40"
             />
