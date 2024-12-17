@@ -9,7 +9,7 @@ function Footer() {
         <div className="w-full md:w-1/3 flex flex-col items-center md:items-start space-y-8">
           <div className="bg-white p-4 rounded-full shadow-lg">
             <img
-              src="https:https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/Curtain_Colletcions-removebg-preview.png?alt=media&token=027d40ba-6ef8-448d-8c53-54659858e5a1"
+              src="https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/Curtain_Colletcions-removebg-preview.png?alt=media&token=027d40ba-6ef8-448d-8c53-54659858e5a1"
               alt="Logo"
               className="w-32 h-32 md:w-40 md:h-40"
             />
@@ -34,8 +34,9 @@ function Footer() {
         <div className="w-full md:w-1/3 text-center md:text-left space-y-8 mt-8 md:mt-0">
           <h4 className="text-3xl font-semibold text-gray-200">Find Us</h4>
           <div className="flex justify-center md:justify-start mt-6">
+            {/* Updated Google Map iframe */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.787517894853!2d73.10777259075809!3d33.53290967628697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed38cb5241a1%3A0x63fcffae759ad7a3!2sThe%20Curtain%20Shop!5e0!3m2!1sen!2sus!4v1731619824960!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217.2490430124924!2d71.65704198131778!3d29.400003988479344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b974f4f95d48f%3A0xa708febe9df7acc1!2sFactory%20Price%20Shop!5e0!3m2!1sen!2sus!4v1734469607730!5m2!1sen!2sus"
               width="280"
               height="180"
               style={{ border: 0 }}
