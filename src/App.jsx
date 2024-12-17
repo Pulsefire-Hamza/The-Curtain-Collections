@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Slideshow from './components/Slideshow'; // Direct import for Slideshow
@@ -17,6 +17,17 @@ const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Cart = lazy(() => import('./pages/Cart'));
 const Checkout = lazy(() => import('./pages/Checkout'));
 
+// ScrollToTop Component
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Reset scroll position to top
+  }, [location]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
@@ -24,6 +35,7 @@ function App() {
         <Navbar />
         <ErrorBoundary>
           <Suspense fallback={<div>Loading...</div>}>
+            <ScrollToTop /> {/* Scroll to top on route change */}
             <Routes>
               <Route
                 path="/"
