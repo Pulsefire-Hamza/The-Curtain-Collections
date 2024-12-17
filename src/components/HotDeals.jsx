@@ -28,6 +28,7 @@ function HotDeals() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((item) => (
           <div key={item.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            {/* Product Image Clickable */}
             <Link to={`/product/${item.id}`} className="w-full">
               <div className="w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-lg relative">
                 <img src={item.src} alt={item.name} className="w-full h-full object-cover" />
@@ -36,6 +37,7 @@ function HotDeals() {
                 </div>
               </div>
             </Link>
+
             <div className="flex flex-col flex-grow p-4">
               {/* Product Name */}
               <h3 className="text-base font-semibold text-gray-800 mb-2 text-center text-ellipsis overflow-hidden whitespace-nowrap">
@@ -48,11 +50,13 @@ function HotDeals() {
               {/* Discounted Price */}
               <p className="text-gray-800 text-lg font-semibold mb-4 text-center">{item.discountedPrice}</p>
 
-              {/* Add to Cart Button */}
+              {/* Add to Cart Button as a Link */}
               <div className="flex justify-center mt-auto">
-                <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300">
-                  Add to Cart
-                </button>
+                <Link to={`/product/${item.id}`}>
+                  <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
