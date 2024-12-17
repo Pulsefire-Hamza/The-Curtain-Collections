@@ -52,8 +52,7 @@ const productsData = [
   { id: 53, name: 'Luxury Embossed Velvet Curtains (2 Panels with 2 belts) Brown LEC-106', price: '6989', color: 'brown', image: 'https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/51.jpg?alt=media&token=cf2bf09b-729a-4b41-a7d3-2fc995634989', date: '2024-09-07' },
   { id: 54, name: '2 Piece Of Premium Velvet Sprinkle Curtain-1641', price: '6599', color: 'yellow', image: 'https://firebasestorage.googleapis.com/v0/b/furniture-storage.appspot.com/o/52.webp?alt=media&token=0806c8c2-ad78-44f3-a70e-8deed7738de4', date: '2024-09-07' }
 ];
-
-function Shop({ addToCart }) {
+function Shop() {
   const [sortOrder, setSortOrder] = useState('low-to-high');
   const [colorFilter, setColorFilter] = useState('all');
 
@@ -81,79 +80,70 @@ function Shop({ addToCart }) {
 
   return (
     <div className="container mx-auto py-8 px-4">
-     <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 pt-12 text-center text-blue-500 animate-slide-down">
-  
-</h1>
-
-
-    {/* Filter Section */}
-<div className="mb-6 flex flex-wrap justify-between items-center space-y-4 sm:space-y-0 sm:space-x-8">
-  <div className="flex items-center space-x-6">
-    <label htmlFor="sort" className="text-lg font-medium text-gray-800">Sort by:</label>
-    <select
-      id="sort"
-      className="bg-white border border-gray-300 text-gray-700 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-      value={sortOrder}
-      onChange={(e) => setSortOrder(e.target.value)}
-    >
-      <option value="a-z">Alphabetically, A-Z</option>
-      <option value="z-a">Alphabetically, Z-A</option>
-      <option value="low-to-high">Price, low to high</option>
-      <option value="high-to-low">Price, high to low</option>
-      <option value="old-to-new">Date, old to new</option>
-      <option value="new-to-old">Date, new to old</option>
-    </select>
-  </div>
-
-  <div className="flex items-center space-x-6">
-    <label htmlFor="color" className="text-lg font-medium text-gray-800">Color:</label>
-    <select
-      id="color"
-      className="bg-white border border-gray-300 text-gray-700 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-      value={colorFilter}
-      onChange={(e) => setColorFilter(e.target.value)}
-    >
-      <option value="all">All Colors</option>
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="black">Black</option>
-      <option value="yellow">Yellow</option>
-      <option value="double-shade">Double Shaded</option>
-      <option value="golden">Golden</option>
-      <option value="grey">Grey</option>
-    </select>
-  </div>
-</div>
-
-
-{/* Products Grid */}
-<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-  {filteredProducts.map(product => (
-    <div key={product.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center">
-      <Link to={`/product/${product.id}`} className="w-full">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="object-contain mb-4 max-w-full h-auto"
-          style={{ maxWidth: '100%', height: 'auto' }} // Ensures the image maintains its original size
-        />
-      </Link>
-      <div className="px-4 pb-4 flex flex-col w-full">
-        {/* Product Name */}
-        <h2 className="text-lg font-medium text-gray-800 mb-2 truncate text-center">{product.name}</h2>
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 pt-12 text-center text-blue-500 animate-slide-down">
         
-        {/* Centering the Price */}
-        <p className="text-gray-600 text-2xl font-semibold mb-4 text-center">{`Rs ${product.price}`}</p>
-        
-        <button
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300"
-          onClick={() => addToCart(product)}
-        >
-          Add to Cart
-        </button>
+      </h1>
+
+      {/* Filter Section */}
+      <div className="mb-6 flex flex-wrap justify-between items-center space-y-4 sm:space-y-0 sm:space-x-8">
+        <div className="flex items-center space-x-6">
+          <label htmlFor="sort" className="text-lg font-medium text-gray-800">Sort by:</label>
+          <select
+            id="sort"
+            className="bg-white border border-gray-300 text-gray-700 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+          >
+            <option value="a-z">Alphabetically, A-Z</option>
+            <option value="z-a">Alphabetically, Z-A</option>
+            <option value="low-to-high">Price, low to high</option>
+            <option value="high-to-low">Price, high to low</option>
+            <option value="old-to-new">Date, old to new</option>
+            <option value="new-to-old">Date, new to old</option>
+          </select>
+        </div>
+
+        <div className="flex items-center space-x-6">
+          <label htmlFor="color" className="text-lg font-medium text-gray-800">Color:</label>
+          <select
+            id="color"
+            className="bg-white border border-gray-300 text-gray-700 rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            value={colorFilter}
+            onChange={(e) => setColorFilter(e.target.value)}
+          >
+            <option value="all">All Colors</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="black">Black</option>
+            <option value="yellow">Yellow</option>
+            <option value="double-shade">Double Shaded</option>
+            <option value="golden">Golden</option>
+            <option value="grey">Grey</option>
+          </select>
+        </div>
       </div>
-    </div>
+
+      {/* Products Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        {filteredProducts.map(product => (
+          <div key={product.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center">
+            <Link to={`/product/${product.id}`} className="w-full">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="object-contain mb-4 max-w-full h-auto"
+                style={{ maxWidth: '100%', height: 'auto' }} // Ensures the image maintains its original size
+              />
+            </Link>
+            <div className="px-4 pb-4 flex flex-col w-full">
+              {/* Product Name */}
+              <h2 className="text-lg font-medium text-gray-800 mb-2 truncate text-center">{product.name}</h2>
+              
+              {/* Centering the Price */}
+              <p className="text-gray-600 text-2xl font-semibold mb-4 text-center">{`Rs ${product.price}`}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
