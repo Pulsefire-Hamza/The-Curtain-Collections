@@ -61,7 +61,7 @@ Thank you for shopping with us! 😊
 `;
 
     // WhatsApp link
-    const whatsappLink = `https://wa.me/923054122637?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/923056667208?text=${encodeURIComponent(message)}`;
 
     try {
       // Redirect to WhatsApp
