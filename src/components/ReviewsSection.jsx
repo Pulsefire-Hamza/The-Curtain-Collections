@@ -35,7 +35,7 @@ const ReviewsSection = () => {
   return (
     <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-  <h2 className="text-6xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 mb-16 whitespace-nowrap">
+ <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center text-gray-800 mb-12 lg:mb-16 tracking-wide xl:tracking-widest whitespace-nowrap">
   What Our Customers Say
 </h2>
 
