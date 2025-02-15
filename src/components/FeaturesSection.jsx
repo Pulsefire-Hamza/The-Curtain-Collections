@@ -42,9 +42,10 @@ const FeaturesSection = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-white to-gray-200 opacity-90 pointer-events-none"></div>
       <div className="container mx-auto px-6 relative z-10">
-<h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center text-gray-800 mb-12 tracking-wide whitespace-nowrap">
+<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center text-gray-800 mb-12 lg:mb-16 tracking-wide xl:tracking-widest whitespace-nowrap">
   Our Premium Features
 </h2>
+
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
