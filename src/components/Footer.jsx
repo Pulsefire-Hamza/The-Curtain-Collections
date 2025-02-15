@@ -67,9 +67,9 @@ function Footer() {
         {/* Right Section: Contact Us */}
         <div className="w-full md:w-1/3 text-center md:text-left space-y-8 mt-8 md:mt-0">
           <h4 className="text-4xl font-serif text-white">Contact Us</h4>
-          <p className="text-gray-300 text-base">The Men's Collection</p>
+          <p className="text-gray-300 text-base">The Curtain Collections</p>
           <p className="text-gray-300 text-base">
-            Amir Fashion, Railway Road, Welcome Chowk, Bahawalpur
+            Amir Furniture, Railway Road, Welcome Chowk, Bahawalpur
           </p>
           <div className="flex justify-center md:justify-start space-x-6">
             <a
