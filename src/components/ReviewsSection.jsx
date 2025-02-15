@@ -35,9 +35,10 @@ const ReviewsSection = () => {
   return (
     <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <h2 className="text-5xl font-extrabold text-center text-gray-800 mb-16">
-          What Our Customers Say
-        </h2>
+      <h2 className="text-5xl font-extrabold text-center text-gray-800 mb-16 sm:text-2xl whitespace-nowrap">
+  What Our Customers Say
+</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {reviews.map((review) => (
             <div
